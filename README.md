@@ -56,9 +56,13 @@ const protoLoader = require("@grpc/proto-loader");
 const packageDef = protoLoader.loadSync("queue.proto");
 const proto = grpc.loadPackageDefinition(packageDef).queue;
 
+// const client = new proto.QueueService(
+//   "queue-engine-production.up.railway.app:443",
+//   grpc.credentials.createSsl()
+// );
 const client = new proto.QueueService(
-  "queue-engine-production.up.railway.app:443",
-  grpc.credentials.createSsl()
+  "gondola.proxy.rlwy.net:19589",
+  grpc.credentials.createInsecure()
 );
 
 // Join a queue
@@ -97,7 +101,8 @@ import queue_pb2
 import queue_pb2_grpc
 
 credentials = grpc.ssl_channel_credentials()
-channel = grpc.secure_channel("queue-engine-production.up.railway.app:443", credentials)
+# channel = grpc.secure_channel("queue-engine-production.up.railway.app:443", credentials)
+channel = grpc.insecure_channel("gondola.proxy.rlwy.net:19589")
 stub = queue_pb2_grpc.QueueServiceStub(channel)
 
 # Join a queue
