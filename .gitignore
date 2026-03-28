@@ -20,7 +20,7 @@ tests/
 vendor/
 
 # Generated protobuf files (optional — some teams commit these)
-*.pb.go
+# *.pb.go
 
 # IDE / Editor
 .vscode/
