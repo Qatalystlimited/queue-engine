@@ -47,7 +47,10 @@ func main() {
 	}
 	defer database.Close()
 
-	port := os.Getenv("GRPC_PORT")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = os.Getenv("GRPC_PORT")
+	}
 	if port == "" {
 		port = "50051"
 	}

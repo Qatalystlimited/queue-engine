@@ -17,12 +17,12 @@ PostgreSQL (Supabase)
 ### Phase 1 — gRPC Skeleton (Current)
 - [x] `queue.proto` — service contract defined
 - [x] gRPC code generated (`proto/queue.pb.go`, `proto/queue_grpc.pb.go`)
-- [ ] Go server running on port `50051`
-- [ ] `JoinQueue` endpoint responding (stub)
-- [ ] `GetPosition` endpoint defined
+- [x] Go server running on port `50051`
+- [x] `JoinQueue` endpoint responding (stub)
+- [x] `GetPosition` endpoint defined
 
 ### Phase 2 — Real Queue Logic
-- [ ] Connect to Supabase (PostgreSQL)
+- [x] Connect to Supabase (PostgreSQL)
 - [ ] Implement transaction-safe `JoinQueue`
 - [ ] Implement `GetPosition` with live DB query
 
