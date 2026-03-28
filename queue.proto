@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+package queue;
+
+option go_package = "github.com/Qatalystlimited/queue-engine/proto";

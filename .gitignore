@@ -1,0 +1,35 @@
+# Environment
+.env
+# .env.*
+
+# Go build output
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/bin/
+/dist/
+
+# Go test cache
+*.test
+*.out
+
+# Go module cache
+vendor/
+
+# Generated protobuf files (optional — some teams commit these)
+*.pb.go
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
