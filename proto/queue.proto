@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package queue;
+
+option go_package = "github.com/Qatalystlimited/queue-engine/proto";
+
+service QueueService {
+  rpc JoinQueue (JoinQueueRequest) returns (JoinQueueResponse);
+  rpc GetPosition (GetPositionRequest) returns (GetPositionResponse);
+}
+
+message JoinQueueRequest {
+  string user_id = 1;
+  string queue_id = 2;
+}
+
+message JoinQueueResponse {
+  string ticket_id = 1;
+  int32 position = 2;
+  string status = 3;
+}
+
+message GetPositionRequest {
+  string user_id = 1;
+  string queue_id = 2;
+}
+
+message GetPositionResponse {
+  int32 position = 1;
+}

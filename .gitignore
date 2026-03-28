@@ -10,6 +10,7 @@
 *.dylib
 /bin/
 /dist/
+tests/
 
 # Go test cache
 *.test
